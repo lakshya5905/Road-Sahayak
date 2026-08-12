@@ -1,0 +1,6 @@
+{
+  "name": "Road Sahayak",
+  "description": "Community-driven road safety help app for reporting and responding to emergency road incidents",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

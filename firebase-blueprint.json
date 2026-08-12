@@ -1,0 +1,64 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profiles",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "phone": { "type": "string" },
+        "vehicleType": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid", "displayName", "email"]
+    },
+    "incidents": {
+      "title": "Road Incidents",
+      "description": "SOS and road emergency incident reports",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "reporterUid": { "type": "string" },
+        "reporterName": { "type": "string" },
+        "reporterPhoto": { "type": "string" },
+        "reporterPhone": { "type": "string" },
+        "type": { "type": "string" },
+        "description": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "location": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "number" },
+            "lng": { "type": "number" }
+          },
+          "required": ["lat", "lng"]
+        },
+        "address": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "object" },
+        "respondersCount": { "type": "number" }
+      },
+      "required": ["reporterUid", "type", "location", "status"]
+    },
+    "liveLocations": {
+      "title": "Live Helper Locations",
+      "description": "Real-time user locations for emergency dispatch and nearby alerts",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "lat": { "type": "number" },
+        "lng": { "type": "number" },
+        "heading": { "type": "number" },
+        "speed": { "type": "number" },
+        "lastUpdated": { "type": "object" }
+      },
+      "required": ["uid", "lat", "lng"]
+    }
+  }
+}
